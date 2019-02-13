@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ko" class="">
+<head>
+<link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/69803953a518c22acf1df17077c4cfa9f77792b2/blogs/style/menubar.css?_version_=69803953a518c22acf1df17077c4cfa9f77792b2" /><!--[if lt IE 9]><script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script><![endif]--><!--[if gte IE 9]>
+<!--><script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.2.1.min.js"></script><!--<![endif]-->
+<script>var tjQuery = jQuery.noConflict(true);</script><style type="text/css">.tt_article_useless_p_margin p {padding-top:0 !important;padding-bottom:0 !important;margin-top:0 !important;margin-bottom:0 !important;}</style><meta name="referrer" content="always"><link rel="icon" href="//t1.daumcdn.net/tistory_admin/static/top/favicon_0630.ico" /><link rel="apple-touch-icon" href="//i1.daumcdn.net/thumb/C180x180/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2428B6475811CD9B14">
+<link rel="apple-touch-icon" sizes="76x76" href="//i1.daumcdn.net/thumb/C76x76/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2428B6475811CD9B14">
+<link rel="apple-touch-icon" sizes="120x120" href="//i1.daumcdn.net/thumb/C120x120/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2428B6475811CD9B14">
+<link rel="apple-touch-icon" sizes="152x152" href="//i1.daumcdn.net/thumb/C152x152/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2428B6475811CD9B14"><meta name="description" content="시작 하기에 앞서서, 알아두셔야 할 것이 저도 배우면서 포스트를 쓰는 입장이다보니까, 서툴고 틀린 부분이 있을 수 있어요. 그래서 그러한 부분을 고쳐나아가면서 같이 배워가는 식으로 진행하려고 합니다. 틀..">
+
+<!-- BEGIN OPENGRAPH -->
+<link rel="canonical" href="https://bb-rabbit.tistory.com/5" /><meta property="og:type" content="article"><meta property="og:url" content="https://bb-rabbit.tistory.com/5" ><meta property="og:site_name" content="내일을 향해" ><meta property="og:title" content="CSS란 무엇일까?" ><meta name="by" content="B-rabbit KiSsi" ><meta property="og:description" content="시작 하기에 앞서서, 알아두셔야 할 것이 저도 배우면서 포스트를 쓰는 입장이다보니까, 서툴고 틀린 부분이 있을 수 있어요. 그래서 그러한 부분을 고쳐나아가면서 같이 배워가는 식으로 진행하려고 합니다. 틀.." ><meta property="og:image" content="https://t1.daumcdn.net/cfile/tistory/232F8D3454FC4B6A13" >
+<!-- END OPENGRAPH -->
+
+
+
+<!-- BEGIN TWITTERCARD -->
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@TISTORY"><meta name="twitter:title" content="CSS란 무엇일까?" ><meta name="twitter:description" content="시작 하기에 앞서서, 알아두셔야 할 것이 저도 배우면서 포스트를 쓰는 입장이다보니까, 서툴고 틀린 부분이 있을 수 있어요. 그래서 그러한 부분을 고쳐나아가면서 같이 배워가는 식으로 진행하려고 합니다. 틀.." ><meta property="twitter:image" content="https://t1.daumcdn.net/cfile/tistory/232F8D3454FC4B6A13" >
+<!-- END TWITTERCARD -->
+
+
+
+<!-- BEGIN DAUMAPP -->
+<meta property="dg:plink" content="https://bb-rabbit.tistory.com/5" ><meta name="plink" content="https://bb-rabbit.tistory.com/5" ><meta name="title" content="CSS란 무엇일까?" ><meta name="article:media_name" content="내일을 향해" ><meta property="article:mobile_url" content="https://bb-rabbit.tistory.com/m/5" ><meta property="article:pc_url" content="https://bb-rabbit.tistory.com/5" ><meta property="article:mobile_view_url" content="https://bb-rabbit.tistory.com/m/5" ><meta property="article:pc_view_url" content="https://bb-rabbit.tistory.com/5" ><meta property="article:talk_channel_view_url" content="https://bb-rabbit.tistory.com/m/5" ><meta property="article:pc_service_home" content="https://www.tistory.com" ><meta property="article:mobile_service_home" content="https://www.tistory.com/m" ><meta property="article:txid" content="1843005_5" /><meta property="article:published_time" content="2015-03-08T22:17:33+09:00" ><meta property="og:regDate" content="20150308221733" ><meta property="article:modified_time" content="2015-03-08T22:17:33+09:00" >
+<!-- END DAUMAPP -->
+
+
+
+<!-- BEGIN STRUCTURED_DATA -->
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BlogPosting","mainEntityOfPage":{"@id":"https:\/\/bb-rabbit.tistory.com\/5"},"url":"https:\/\/bb-rabbit.tistory.com\/5","headline":"CSS\ub780 \ubb34\uc5c7\uc77c\uae4c?","description":"\uc2dc\uc791 \ud558\uae30\uc5d0 \uc55e\uc11c\uc11c, \uc54c\uc544\ub450\uc154\uc57c \ud560 \uac83\uc774 \uc800\ub3c4 \ubc30\uc6b0\uba74\uc11c \ud3ec\uc2a4\ud2b8\ub97c \uc4f0\ub294 \uc785\uc7a5\uc774\ub2e4\ubcf4\ub2c8\uae4c, \uc11c\ud234\uace0 \ud2c0\ub9b0 \ubd80\ubd84\uc774 \uc788\uc744 \uc218 \uc788\uc5b4\uc694. \uadf8\ub798\uc11c \uadf8\ub7ec\ud55c \ubd80\ubd84\uc744 \uace0\uccd0\ub098\uc544\uac00\uba74\uc11c \uac19\uc774 \ubc30\uc6cc\uac00\ub294 \uc2dd\uc73c\ub85c \uc9c4\ud589\ud558\ub824\uace0 \ud569\ub2c8\ub2e4. \ud2c0..","author":{"@type":"Person","name":"B-rabbit KiSsi"},"image":{"@type":"ImageObject","url":"https:\/\/t1.daumcdn.net\/cfile\/tistory\/232F8D3454FC4B6A13","width":"800px","height":"800px"},"datePublished":"20150308T22:17:33+09:00","dateModified":"20150308T22:17:33+09:00","publisher":{"@type":"Organization","name":"TISTORY","logo":{"@type":"ImageObject","url":"https:\/\/t1.daumcdn.net\/tistory_admin\/static\/images\/openGraph\/opengraph.png","width":"800px","height":"800px"}}}</script>
+<!-- END STRUCTURED_DATA -->
+
+
+	<title>B-Rabbit의 수험정보 전문블로그</title>
+	<meta name="robots" content="index,follow">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="B-Rabbit의 공무원, 자격증 수험정보">
+	<meta property="og:description" content="공무원, 자격증시험과 관련된 수험정보">
+	<meta property="og:url" content="http://bb-rabbit.tistory.com/">
+	<meta name="google-site-verification" content="GkBOv0H6NgtHvE8kyROnOe6koMhmq9exFzZtX0U_zNs" />
+	 <meta name="naver-site-verification" content="7d5edf4cda8dd2c2e7a7d02ca7c88d3b8da2e0b7"/>
+<meta name="title" content="CSS란 무엇일까? :: 내일을 향해" />
+	
+<!-- <meta name="description" Content="공무원 자격증 전문 정보블로그" /> -->
+	
+	
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+<link rel="alternate" type="application/rss+xml" title="내일을 향해" href="https://bb-rabbit.tistory.com/rss" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<link rel="stylesheet" href="https://tistory1.daumcdn.net/tistory/1843005/skin/style.css?_T_=1507097699" />
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css">
+<![endif]-->
+<link href="https://tistory1.daumcdn.net/tistory/1843005/skin/images/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+<link rel="canonical" href="http://bb-rabbit.tistory.com/category/%EC%8B%9C%ED%97%98%EC%A0%95%EB%B3%B4">
+	
+<script>
+//추가 단축키
+var key = new Array();
+key['w'] = "/admin/entry/post/";
+key['e'] = "/admin/skin/edit/";
+key['r'] = "/admin/plugin/refererUrlLog/";
+key['h'] = "/";
+
+function getKey(keyStroke) {
+	if ((event.srcElement.tagName != 'INPUT') && (event.srcElement.tagName != 'TEXTAREA')){
+		isNetscape=(document.layers);
+		eventChooser = (isNetscape) ? keyStroke.which : event.keyCode;
+		which = String.fromCharCode(eventChooser).toLowerCase();
+		for (var i in key)
+			if (which == i) window.location = key[i];
+	}
+}
+document.onkeypress = getKey;
+</script>
+
+<style type="text/css">
+		#daumSearchBox {
+			height: 21px;
+			background-image : url(//i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bg_search2_2.gif);
+			margin: 5px auto ;
+			padding: 0;
+		}
+		#daumSearchBox input {
+			background: none;
+			margin : 0;
+			padding : 0;
+			border : 0;
+		}
+		#daumSearchBox #daumLogo {
+			width: 34px;
+			height: 21px;
+			float: left;
+			margin-right: 5px;
+			background-image : url(//i1.daumcdn.net/img-media/tistory/img/bg_search1_2_2010ci.gif);
+		}
+		#daumSearchBox #show_q {
+			background-color: transparent;
+			border: none;
+			font: 12px Gulim, Sans-serif;
+			color: #555;
+			margin-top: 4px;
+			margin-right: 15px;
+			float: left;
+		}
+
+		#daumSearchBox #show_btn {
+			background-image : url(//i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bt_search_2.gif);
+			width: 37px;
+			height: 21px;
+			float: left;
+			margin:0;
+			cursor:pointer;
+			text-indent:-1000em;
+		}
+	</style><link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/69803953a518c22acf1df17077c4cfa9f77792b2/blogs/plugins/lightbox/assets/css/lightbox.min.css?_version_=69803953a518c22acf1df17077c4cfa9f77792b2" />
+<link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/69803953a518c22acf1df17077c4cfa9f77792b2/blogs/plugins/TistoryProfileLayer/style.css?_version_=69803953a518c22acf1df17077c4cfa9f77792b2" />
+<script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/69803953a518c22acf1df17077c4cfa9f77792b2/blogs/plugins/TistoryProfileLayer/profile.js?_version_=69803953a518c22acf1df17077c4cfa9f77792b2"></script>
+	<style type="text/css">
+		.another_category { border: 1px solid #E5E5E5; padding: 10px 10px 5px; margin:10px 0; clear: both; }
+		.another_category h4 { font-size: 12px !important; margin: 0 !important; border-bottom: 1px solid #E5E5E5 !important; padding: 2px 0 6px !important; }
+		.another_category h4 a { font-weight: bold !important; }
+		.another_category table { table-layout: fixed; border-collapse: collapse; width: 100% !important; margin-top: 10px !important; }
+		* html .another_category table { width: auto !important; }
+		*:first-child+html .another_category table { width: auto !important; }
+		.another_category th, .another_category td { padding: 0 0 4px !important; }
+		.another_category th { text-align: left; font-size: 12px !important; font-weight: normal;  word-break: break-all; overflow: hidden; line-height: 1.5; }
+		.another_category td { text-align: right; width: 80px; font-size: 11px; }
+		.another_category th a { font-weight: normal; text-decoration: none; border: none !important; }
+		.another_category th a.current{ font-weight: bold; text-decoration: none !important; border-bottom: 1px solid !important; }
+		.another_category th span { font-weight: normal; text-decoration: none; font: 10px Tahoma, Sans-serif; border: none !important; }
+
+		.another_category_color_gray, .another_category_color_gray h4 { border-color: #E5E5E5 !important; }
+		.another_category_color_gray * { color: #909090 !important; }
+		.another_category_color_gray th a.current{border-color:#909090 !important;}
+		.another_category_color_gray h4, .another_category_color_gray h4 a { color: #737373 !important; }
+
+
+		.another_category_color_red, .another_category_color_red h4 { border-color: #F6D4D3 !important;  }
+		.another_category_color_red * { color: #E86869 !important; }
+		.another_category_color_red th a.current{border-color:#E86869 !important;}
+		.another_category_color_red h4, .another_category_color_red h4 a { color: #ED0908 !important; }
+
+
+		.another_category_color_green, .another_category_color_green h4 { border-color: #CCE7C8 !important; }
+		.another_category_color_green * { color: #64C05B !important; }
+		.another_category_color_green th a.current{border-color:#64C05B !important;}
+		.another_category_color_green h4, .another_category_color_green h4 a { color: #3EA731 !important; }
+
+
+		.another_category_color_blue, .another_category_color_blue h4 { border-color: #C8DAF2 !important; }
+		.another_category_color_blue * { color: #477FD6 !important; }
+		.another_category_color_blue th a.current{border-color:#477FD6 !important;}
+		.another_category_color_blue h4, .another_category_color_blue h4 a { color: #1960CA !important; }
+
+
+		.another_category_color_violet, .another_category_color_violet h4 { border-color: #E1CEEC !important;  }
+		.another_category_color_violet * { color:#9D64C5 !important; }
+		.another_category_color_violet th a.current{border-color:#9D64C5 !important;}
+		.another_category_color_violet h4, .another_category_color_violet h4 a { color: #7E2CB5 !important; }
+	</style>
+<script type="text/javascript">
+        window.TistoryBlog = {
+            url: "https://bb-rabbit.tistory.com",
+            tistoryUrl: "https://bb-rabbit.tistory.com",
+			manageUrl: 'https://bb-rabbit.tistory.com/manage'
+        };
+        var servicePath = "";
+        var blogURL = "";
+    </script>
+
+	<script> (function() { window.orgjQuery = window.jQuery; window.jQuery = tjQuery })()</script>
+    <script src="https://t1.daumcdn.net/section/uoclike/news/uoclike.min.js"></script>
+	<script> (function() { window.jQuery = window.orgjQuery; delete window.orgjQuery })()</script>
+    <script>
+		(function($) {
+			$.fn.extend({
+				size: function () {
+					return this.length
+				}
+			});
+			$.fn.UOCLike.defaults.updateServiceCategory = true;
+					})(tjQuery)
+    </script>
+        <script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/69803953a518c22acf1df17077c4cfa9f77792b2/blogs/script/_/base.js?_version_=69803953a518c22acf1df17077c4cfa9f77792b2"></script>
+        <link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/69803953a518c22acf1df17077c4cfa9f77792b2/blogs/style/dialog.css?_version_=69803953a518c22acf1df17077c4cfa9f77792b2"/>
+            <link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/69803953a518c22acf1df17077c4cfa9f77792b2/blogs/style/postBtn.css?_version_=69803953a518c22acf1df17077c4cfa9f77792b2"/>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script></head>
+
+<body id="tt-body-page">
+<script type="text/javascript">
+	(function() {
+		if (!window.T) {
+			window.T = {}
+		}
+		window.T.config = {"TOP_SSL_URL":"https:\/\/www.tistory.com","PREVIEW":false,"ROLE":"guest","PREV_PAGE":"\/7?category=114979","NEXT_PAGE":"","BLOG":{"isDormancy":false,"title":"\ub0b4\uc77c\uc744 \ud5a5\ud574"},"NEED_COMMENT_LOGIN":true,"COMMENT_LOGIN_CONFIRM_MESSAGE":"\uc774 \ube14\ub85c\uadf8\ub294 \ub85c\uadf8\uc778\ud55c \uc0ac\uc6a9\uc790\uc5d0\uac8c\ub9cc \ub313\uae00 \uc791\uc131\uc744 \ud5c8\uc6a9\ud588\uc2b5\ub2c8\ub2e4. \uc9c0\uae08 \ub85c\uadf8\uc778\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?","LOGIN_URL":"https:\/\/www.tistory.com\/auth\/login\/?redirectUrl=http%3A%2F%2Fbb-rabbit.tistory.com%2F5%3Fcategory%3D114979","DEFAULT_URL":"https:\/\/bb-rabbit.tistory.com","USER":{"name":null,"homepage":null}};
+	})();
+</script>
+
+<script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/69803953a518c22acf1df17077c4cfa9f77792b2/blogs/script/blog/common.js?_version_=69803953a518c22acf1df17077c4cfa9f77792b2"></script>
+<div style="margin:0; padding:0; border:none; background:none; float:none; clear:none; z-index:0"></div>
+<div id="wrap">
+	<div id="sidebar">
+		<div class="blank"></div>
+		<h1><a href="/">내일을 향해</a></h1>
+		
+			<div class="widget category"> <!-- Category -->
+				<ul class="tt_category">
+	<li class="">
+		<a class="link_tit" href="/category">
+			분류 전체보기							<span class="c_cnt">(209)</span>
+			
+					</a>
+
+				<ul class="category_list">
+							<li class="">
+					<a class="link_item" href="/category/%EC%9C%A0%EC%9A%A9%ED%95%9C%20%EC%A0%95%EB%B3%B4">
+						유용한 정보													<span class="c_cnt">(5)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/%EC%9D%BC%EC%83%81">
+						일상													<span class="c_cnt">(8)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/%EA%B3%B5%EB%B6%80">
+						공부													<span class="c_cnt">(31)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/%EC%8B%9C%ED%97%98%EC%A0%95%EB%B3%B4">
+						시험정보													<span class="c_cnt">(153)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="/category/%EC%8B%9C%ED%97%98%EC%A0%95%EB%B3%B4/7%EA%B8%89%EA%B3%B5%EB%AC%B4%EC%9B%90">
+									7급공무원
+																			<span class="c_cnt">(7)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/%EC%8B%9C%ED%97%98%EC%A0%95%EB%B3%B4/9%EA%B8%89%EA%B3%B5%EB%AC%B4%EC%9B%90">
+									9급공무원
+																			<span class="c_cnt">(75)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/%EC%8B%9C%ED%97%98%EC%A0%95%EB%B3%B4/%EA%B3%B5%EC%9D%B8%EC%A4%91%EA%B0%9C%EC%82%AC">
+									공인중개사
+																			<span class="c_cnt">(23)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/%EC%8B%9C%ED%97%98%EC%A0%95%EB%B3%B4/%EA%B2%BD%EB%B9%84%EC%A7%80%EB%8F%84%EC%82%AC">
+									경비지도사
+																			<span class="c_cnt">(5)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/%EC%8B%9C%ED%97%98%EC%A0%95%EB%B3%B4/%EC%A7%81%EC%97%85%EC%83%81%EB%8B%B4%EC%82%AC">
+									직업상담사
+																			<span class="c_cnt">(3)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/%EC%8B%9C%ED%97%98%EC%A0%95%EB%B3%B4/%EA%B2%BD%EC%B0%B0%EA%B3%B5%EB%AC%B4%EC%9B%90">
+									경찰공무원
+																			<span class="c_cnt">(18)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/%EC%8B%9C%ED%97%98%EC%A0%95%EB%B3%B4/%EC%9E%90%EA%B2%A9%EC%A6%9D">
+									자격증
+																			<span class="c_cnt">(18)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/%EC%8B%9C%ED%97%98%EC%A0%95%EB%B3%B4/%EA%B8%B0%EC%88%A0%EC%A7%81%EA%B3%B5%EB%AC%B4%EC%9B%90">
+									기술직공무원
+																			<span class="c_cnt">(2)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/Game">
+						Game													<span class="c_cnt">(12)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="/category/Game/%EB%A7%88%EC%9D%B8%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8">
+									마인크래프트
+																			<span class="c_cnt">(1)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/Game/%EB%94%94%EC%95%84%EB%B8%94%EB%A1%9C3">
+									디아블로3
+																			<span class="c_cnt">(1)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/Game/%EB%AA%A8%EB%B0%94%EC%9D%BC">
+									모바일
+																			<span class="c_cnt">(1)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/Game/PC">
+									PC
+																			<span class="c_cnt">(3)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+					</ul>
+			</li>
+</ul>
+			</div>
+			
+			<div class="widget"> <!-- Blog Menu -->
+				<ul>		<li class="t_menu_home first">
+			<a href="/">홈</a>
+		</li>
+				<li class="t_menu_tag">
+			<a href="/tag">태그</a>
+		</li>
+				<li class="t_menu_medialog">
+			<a href="/media">미디어로그</a>
+		</li>
+				<li class="t_menu_location">
+			<a href="/location">위치로그</a>
+		</li>
+				<li class="t_menu_guestbook last">
+			<a href="/guestbook">방명록</a>
+		</li>
+		</ul>
+			</div>
+			 <!-- Notice -->
+			
+			<div class="widget">
+				<ul>
+					
+				</ul>
+			</div>
+			
+			
+			<div class="widget"> <!-- Recent Comments -->
+				<ul id="recentComments">
+					<li><a href="/13#comment4956576" title="B-rabbit 정범기〃2015">감사합니다 ~</a></li>
+<li><a href="/13#comment4956451" title="은니엘〃2015">좋은 포스팅 열심히 하세요 ^^</a></li>
+<li><a href="/1#comment4942215" title="은니엘〃2015">ㅎㅎㅎㅎㅎㅎㅎ</a></li>
+				</ul>
+			</div>
+			 <!-- Links -->
+			<div class="widget">
+				<ul>
+					
+				</ul>
+			</div>
+			 <!-- Counter -->
+			<div class="widget counter text-center">
+				<span class="yesterday">0</span> /
+				<span class="today">1</span> /
+				<span class="total">24,076</span>
+			</div>
+			 <!-- Search -->
+			<div class="widget search text-center">
+				
+				<input class="search" placeholder="press enter to search…" type="text" name="search" value="" onkeypress="if (event.keyCode == 13) { try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){} }" />
+				
+			</div>
+			
+		<div class="blank"></div>
+	</div>
+
+	<div id="content">
+		<div id="content-inner">
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div id="head">
+				<h2><a href="/5">CSS란 무엇일까?</a></h2>
+				<div class="date">2015.03.08 22:17</div>
+			</div>
+
+			<div id="body" class="entry">
+				<div class="tag_label">
+				
+				</div>
+
+				<div class="article">
+				<p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);"></span><br /></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:351px;;height:auto;max-width:100%"><img src="https://t1.daumcdn.net/cfile/tistory/232F8D3454FC4B6A13" style="max-width:100%;height:auto" width="351" height="249" filename="css.jpg" filemime="image/jpeg" style=""""/></span></p><p style="text-align: center;"><br /></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">시작 하기에 앞서서, 알</span><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">아두셔야 할 것이&nbsp;</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">저도 배우면서 포스트를 쓰는 입장이다보니까,</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">서툴고 틀린 부분이 있을 수 있어요.</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">그래서 그러한 부분을 고쳐나아가면서&nbsp;</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">같이 배워가는 식으로 진행하려고 합니다.</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">틀렸다고 너무 몰아붙이시면 당황하고 슬퍼져요.. ㅠㅠ</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">이런 부분에 대해서는 다시 한번 양해부탁드립니다.</span></p><p style="text-align: center;"><br /></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">HTML이 무엇인지는 알고 계시죠?</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">웹페이지를 만들기 위해서 사용되는 언어지요.</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">하이퍼텍스트 언어라고도 하고요.</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">너무 깊게 들어가기는 제가 알고 있는 지식이 얕기 때문에..&nbsp;</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">양해부탁드립니다 ^^..</span></p><p style="text-align: center;"><br /></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">그렇다면 CSS는 간단하게 이야기 하자면 무엇일까요?</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움;"><b><u><span style="color: rgb(102, 0, 255);">바로 HTML을 꾸며주는 역할을 하는 것이 바로 CSS입니다.</span></u></b></span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">그래서 </span><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">배우기전에는 HTML이 선행학습이 되어야하겠죠?</span></p><p style="text-align: center;"><br /></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">HTML에서도 기본적으로 디자인이 제공되지만,</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">너무 딱딱한 느낌이 들기 때문에,</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">&nbsp;이</span><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">를 통해서 이쁘게 잘 꾸며줍니다.</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">디자인의 차이가 얼마나 큰지는 다들 알고 계시죠??</span></p><p style="text-align: center;"><br /></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">오늘은 간단하게 무엇인지만 알아보고,</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">다음부터 이제 한번 코드도 짜보고 ,</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">&nbsp;알아 보도록 하겠습니다.</span></p><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);">잘부탁드립니다 ^^</span></p><div style="text-align: center;">( 매일 매일은 업뎃 못하겠지만,</div><div style="text-align: center;">시간 되는대로 올리도록 하려고 예정중입니다. )</div><p style="text-align: center;"><span style="font-size: 11pt; font-family: Dotum, 돋움; color: rgb(0, 0, 0);"></span><br /></p><div class="container_postbtn"><div class="postbtn_like"><div class="like_btn" data-uoc-svc="tistory" data-uoc-uid="1843005_5" data-uoc-sc="" data-uoc-pcUrl="https://bb-rabbit.tistory.com/5" data-uoc-fetchurl="http://api.kakao.tistory.com/like/fetch?uid=1843005_5"><label class="uoc-icon"><span class="ico_postbtn ico_like"></span> <span class="txt_like uoc-text">공감</span><span class="txt_like uoc-count"></span><input type="button" class="inp_btn uoc-button"></label></div><span class="ico_bar"></span><label data-thumbnail-url="https://t1.daumcdn.net/cfile/tistory/232F8D3454FC4B6A13" data-title="CSS란 무엇일까?" data-description="시작 하기에 앞서서, 알아두셔야 할 것이 저도 배우면서 포스트를 쓰는 입장이다보니까, 서툴고 틀린 부분이 있을 수 있어요. 그래서 그러한 부분을 고쳐나아가면서 같이 배워가는 식으로 진행하려고 합니다. 틀.." data-profile-image="https://t1.daumcdn.net/cfile/tistory/2428B6475811CD9B14" data-profile-name="KiSsi" data-pc-url="https://bb-rabbit.tistory.com/5" data-blog-title="내일을 향해"><span class="ico_postbtn ico_sns">sns</span><input type="button" class="inp_btn"></label><span class="ico_bar"></span><label data-entry-id="5"><span class="ico_postbtn ico_report">신고</span><input type="button" class="inp_btn"></label></div></div><div class="another_category another_category_color_gray">
+<h4>'<a href="/category/공부">공부</a>' 카테고리의 다른 글</h4>
+<table>
+<tr>
+<th>
+<a href="/12?category=114979" >데이터베이스의 정의에 대해 알아보려고해요.</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2015.03.16</td>
+</tr>
+<tr>
+<th>
+<a href="/11?category=114979" >분산 처리 시스템이란?</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2015.03.15</td>
+</tr>
+<tr>
+<th>
+<a href="/10?category=114979" >온라인 처리 시스템</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2015.03.14</td>
+</tr>
+<tr>
+<th>
+<a href="/8?category=114979" >일괄 처리 시스템은 무엇일까요?</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2015.03.13</td>
+</tr>
+<tr>
+<th>
+<a href="/7?category=114979" >정보와 데이터의 차이점</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2015.03.12</td>
+</tr>
+<tr>
+<th>
+<a href="/5?category=114979"  class ="current" >CSS란 무엇일까?</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2015.03.08</td>
+</tr>
+</table></div>
+				</div>
+
+				
+
+				<div id="entry5Comment" style="display:block">
+				<div id="communicate">
+				<form method="post" action="/comment/add/5" onsubmit="return false" style="margin: 0">
+					<div class="communicateWrite">
+					
+						
+						<div class="name guest">
+							<label for="name">NAME</label>
+							<input id="name" type="text" name="name" value="" />
+						</div>
+						<div class="password guest">
+							<label for="password">PASSWORD</label>
+							<input id="password" type="password" maxlength="8" name="password" value="" />
+						</div>
+						<div class="homepage guest">
+							<label for="homepage">HOMEPAGE</label>
+							<input id="homepage" type="text" name="homepage" value="http://"/>
+						</div>
+						
+					
+						<div class="textarea"><textarea name="comment" rows="10" cols="50"></textarea></div>
+						<div class="submit"><input type="submit" value="WRITE" onclick="addComment(this, 5); return false;" /></div>
+						<div class="secret">
+							<label for="secret">SECRET</label>
+							<input id="secret" type="checkbox" name="" />
+						</div>
+						<div class="clear"></div>
+					</div>
+				</form>
+
+				
+				</div>
+				</div><script type="text/javascript">loadedComments[5]=true;findFragmentAndHighlight(5)</script>
+			</div>
+			
+
+			
+
+			<div id="paging">
+			
+				<a  href='/7?category=114979' class="prev ">PREV</a>
+				<a class="numbox"  href='/40?category=114979'><span >1</span></a><a class="numbox" ><span >&middot;&middot;&middot;</span></a><a class="numbox"  href='/11?category=114979'><span >27</span></a><a class="numbox"  href='/10?category=114979'><span >28</span></a><a class="numbox"  href='/8?category=114979'><span >29</span></a><a class="numbox"  href='/7?category=114979'><span >30</span></a><a class="numbox" ><span class="selected">31</span></a>
+				<a  class="next no-more-next">NEXT</a>
+			
+			</div>
+
+			<s_sidebar_element>
+			<div id="recent-post">
+				<h4><a href="/category">+ Recent posts</a></h4>
+				<ul>
+					
+					<li class="box">
+						<a href="/213" class="thumb">
+						<img src="https://tistory1.daumcdn.net/tistory/1843005/skin/images/blank.png" alt="post image" />
+						<span class="title">공인중개사 기출문제 푸세요</span>
+						</a>
+					</li>
+					
+
+					<li class="box">
+						<a href="/212" class="thumb">
+						<img src="https://tistory1.daumcdn.net/tistory/1843005/skin/images/blank.png" alt="post image" />
+						<span class="title">9급공무원 영어 기출문제 실력..</span>
+						</a>
+					</li>
+					
+
+					<li class="box">
+						<a href="/211" class="thumb">
+						<img src="https://tistory1.daumcdn.net/tistory/1843005/skin/images/blank.png" alt="post image" />
+						<span class="title">주택관리사 전망 괜찮을까</span>
+						</a>
+					</li>
+					
+
+					<li class="box">
+						<a href="/210" class="thumb">
+						<img src="https://tistory1.daumcdn.net/tistory/1843005/skin/images/blank.png" alt="post image" />
+						<span class="title">공기업 준비 인강으로 해결</span>
+						</a>
+					</li>
+					
+					<div class="clear"></div>
+				</ul>
+			</div>
+			</s_sidebar_element>
+
+			<div class="clear"></div>
+
+			<div id="foot">
+				<div class="powered">Powered by <a href="http://www.tistory.com/" target="_blank">Tistory</a>, Designed by <a href="http://wallel.com/" target="_blank">wallel</a></div>
+				<div class="social">
+					<a href="https://bb-rabbit.tistory.com/rss" target="_blank">Rss Feed</a> and
+					<a href="https://www.twitter.com/" target="_blank">Twitter</a>,
+					<a href="https://www.facebook.com/" target="_blank">Facebook</a>,
+					<a href="https://www.youtube.com/" target="_blank">Youtube</a>,
+					<a href="https://plus.google.com/" target="_blank">Google+</a>
+				</div>
+			</div>
+		</div> <!-- content-inner close -->
+	</div> <!-- content close -->
+</div> <!-- wrap close -->
+
+
+<div id="sidebar-toggle"><i class="icon-reorder"></i></div>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://tistory1.daumcdn.net/tistory/1843005/skin/images/common.js"></script>
+<script src="https://tistory1.daumcdn.net/tistory/1843005/skin/images/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+$(document).ready(function () {
+	if ($('body').width() > "960") {
+		$("#sidebar").mCustomScrollbar({
+			theme: "dark-thin",
+			autoHideScrollbar: "true"
+		});
+	};
+});
+</script>
+<script src="https://tistory1.daumcdn.net/tistory/1843005/skin/images/ygal-edit.js"></script>
+<script src="//search1.daumcdn.net/search/statics/common/js/g/search_dragselection.min.js"></script>
+<script>
+    (function($) {
+        $("body").bind('copy', function (e) {
+
+            var url = document.location.href,
+                decodedUrl = decodeURI(url),
+                selection = window.getSelection();
+
+
+            if (typeof window.getSelection == "undefined") {//IE8 or earlier...
+                event.preventDefault();
+
+                var pagelink = '\n\n 출처: ' + decodedUrl,
+                    copytext = selection + pagelink;
+
+                if (window.clipboardData) {
+                    window.clipboardData.setData('Text', copytext);
+                }
+                return;
+            }
+            var body_element = document.getElementsByTagName('body')[0];
+
+            //if the selection is short let's not annoy our users
+            if (("" + selection).length < 30) return;
+
+            //create a div outside of the visible area
+            var newdiv = document.createElement('div');
+            newdiv.style.position = 'absolute';
+            newdiv.style.left = '-99999px';
+            body_element.appendChild(newdiv);
+            newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+            //we need a <pre> tag workaround
+            //otherwise the text inside "pre" loses all the line breaks!
+            if (selection.getRangeAt(0).commonAncestorContainer.nodeName == "PRE") {
+                newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+            }
+
+            newdiv.innerHTML += '<br /><br />출처: <a href="' + url + '">' + decodedUrl + '</a> [내일을 향해]';
+
+            selection.selectAllChildren(newdiv);
+            window.setTimeout(function () {
+                body_element.removeChild(newdiv);
+            }, 200);
+
+        });
+    })(tjQuery);
+</script><script src="https://t1.daumcdn.net/tistory_admin/69803953a518c22acf1df17077c4cfa9f77792b2/blogs/plugins/lightbox/assets/js/lightbox.min.js?_version_=69803953a518c22acf1df17077c4cfa9f77792b2"></script>
+	<script>
+	    lightbox.option({
+			"fadeDuration": 200,
+		    "resizeDuration": 200,
+		    "wrapAround": false,
+			"albumLabel": "%1 / %2",
+			"fitImagesInViewport":true ,
+			"stopEvent": false
+	    })
+	</script><script type="text/javascript">
+var _tiq = 'undefined' !== typeof _tiq ? _tiq : [];
+_tiq.push(['__setConfig', {enableScroll:true, enableClick:true, enableButton:true}]);
+_tiq.push(["__setParam", "svcdomain", "user.tistory.com"]);
+(function(d) {
+	var se = d.createElement('script'); se.type = 'text/javascript'; se.async = true;
+	se.src = location.protocol + '//m2.daumcdn.net/tiara/js/td.min.js';
+	var s = d.getElementsByTagName('head')[0]; s.appendChild(se);
+})(document);
+_tiq.push(['__setParam', 'param_ex', JSON.stringify({"userId":"1383519","blogId":"1843005","entryId":"5"})]);
+_tiq.push(['__trackPageview']);
+_tiq.push(['__content', 't_content', {
+'c_id':'1843005_5', 
+'c_title':'CSS란 무엇일까?', 
+'type':'article', 
+'author':'', 
+'author_id':'1383519', 
+'cp':'내일을 향해', 
+'cp_id':'1843005', 
+'regdata':'2015-03-08 22:17:33', 
+'plink':'https://bb-rabbit.tistory.com/5', 
+'media':'pcweb', 
+}]);
+var addEvent = function (evt, fn) { window.addEventListener ? window.addEventListener(evt, fn, false) : window.attachEvent('on' + evt, fn); };
+var removeEvent = function(evt, fn) { window.removeEventListener ? window.removeEventListener(evt, fn, false) : window.detachEvent('on' + evt, fn);};
+var ua = navigator.userAgent.toLowerCase(); var isIOS = /iP[ao]d|iPhone/i.test(ua);
+var contentExStat = function() {
+		_tiq.push(['__content', 't_content_ex', {
+			'data_type':'usage'
+, 'meta': {
+'c_id':'1843005_5', 
+'c_title':'CSS란 무엇일까?', 
+'type':'article', 
+'author':'', 
+'author_id':'1383519', 
+'cp':'내일을 향해', 
+'cp_id':'1843005', 
+'regdata':'2015-03-08 22:17:33', 
+'plink':'https://bb-rabbit.tistory.com/5', 
+'media':'pcweb', 
+}
+}]);
+		removeEvent(isIOS ? 'pagehide' : 'beforeunload', contentExStat);
+};
+addEvent(isIOS ? 'pagehide' : 'beforeunload', contentExStat);
+</script>
+<script type="text/javascript">window.roosevelt_params_queue = window.roosevelt_params_queue || []; window.roosevelt_params_queue.push({channel_id: "dk", channel_label: 'tistory'});</script>
+<script type="text/javascript" src="//t1.daumcdn.net/midas/rt/dk_bt/roosevelt_dk_bt.js" async></script><script type="text/javascript">if(window.console!=undefined){setTimeout(console.log.bind(console,"%cTISTORY","font:8em Arial;color:#EC6521;font-weight:bold"),0);setTimeout(console.log.bind(console,"%c  나를 표현하는 블로그","font:2em sans-serif;color:#333;"),0);}</script><iframe style="position:absolute;width:1px;height:1px;left:-100px;top:-100px" src="//bb-rabbit.tistory.com/api" id="editEntry"></iframe><div id="layer_sns" class="layer_sns">
+        <div class="bg_layer"></div>
+        <ul class="list_sns">
+            <li><a class="ico_sns ico_fb" data-service="facebook">페이스북 공유하기</a></li>
+            <li><a class="ico_sns ico_kt" data-service="kakaotalk">카카오톡 공유하기</a></li>
+            <li><a class="ico_sns ico_ks" data-service="kakaostory">카카오스토리 공유하기</a></li>
+            <li><a class="ico_sns ico_tw" data-service="twitter">트위터 공유하기</a></li>
+        </ul>
+        <button type="button" class="btn_close"><span class="ico_sns ico_close">sns공유하기 레이어 닫기</span></button>
+    </div></body>
+</html>
