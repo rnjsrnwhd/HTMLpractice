@@ -12,13 +12,14 @@
 <hr>
 <form action="input">
 <p><b>개인정보</b></p>
-<label>이름</label><input type="text" value="공백없이 입력하세요"><br>
+<label>이름</label><input type="text" value="공백없이 입력하세요" autocomplete="on"><br>
 <label>연락처</label><input type="tel">
 
 <p><b>지원 분야</b></p>
 <label><input type="radio">웹 퍼블리싱</label>
 <label><input type="radio">웹 어플리케이션 개발</label>
 <label><input type="radio">개발 환경 개선</label>
+<input type="radio">웹 퍼블리싱
 
 <p><b>지원 동기</b></p>
 <textarea name="motivation" cols="50" rows="10">
@@ -29,11 +30,35 @@
 <input type="reset" vlaue="다시작성">
 </form>
 
+<form action="kk">
+  <fieldset</ul>
+    <legend>일번</legend>
+    <ul>
+      <li><label><input type="text" value="공백없이 입력하세요" autocomplete="on">이름</label><br></li>
+      <li>  <label>연락처</label><input type="tel"></li>
+    </ul>
+
+  </fieldset>
+  <fieldset>
+    <legend>이번</legend>
+    <label>두번쨰 </label><input type="text" value="공백없이 입력하세요" autocomplete="on"><br>
+    <label>두번쨰연락처 </label><input type="tel">
+
+
+  </fieldset>
+
+  <label for="hard">아이디입력:</label>
+
+</form>
 
 
 
-
-
+  <input type="search" id="hard" value="prac" size="100">
+  <input type="email"><br>
+  <input type="number">
+  <input type="range">
+  <input type="color">
+  
 
 
 
