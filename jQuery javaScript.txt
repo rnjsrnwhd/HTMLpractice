@@ -1,0 +1,142 @@
+자바스크립트 jQuery
+	html css javascript는 분리해서 하는게 좋음
+
+	javascipt 설정 필요 없음
+	jQuery 설정  라이브러리 필요
+	1. 	구글 jquery cdn 검색 내용긁어서  head내 복붙  p412 
+	2.	jQuery.js 지핑을 복사한 다음에 resources  내에 파일로 만들어주면 홈에서 cdn 적지 않고 사용가능  
+
+	1번방법을 할경우 cdn이 이미 다운받아져있는경우 속도가 조금 빠름 	p420
+
+
+	자바스크립트쓸때
+	1.객체 접근(선택자(id))
+	2.이벤트 등록(onclick hover)
+	3.문서 객체 조작(HTML 변경, 더하기, 빼거나)
+	4.
+
+02.18 IT
+1. 선택자('id',name,class )
+2. 문서 객체 조작 (EX  innerHTML, html(), removeChild, remove() )
+3. 이벤트 연결 (onclick, ('click', function(){ }), addEventlistener )  
+
+onclick을 안쓰고 스크립트 실행시키는 법
+
+
+다른 라이브러리의 언어를 섞어쓰지 않도록 주의할 것
+button만 click 되는게  아님
+
+/* javascript */
+	/* alert("!"); *//* body내용이 만들어지기 전에(문서만들어지기전) alert 출력 */
+	/* 버튼 클릭 후 뭘 하겠다 액션을 정해도  본문에서 버튼이 만들어지기전에 시작되는거라 동작이안됨.  */
+	
+	/* /* window.onload=function(){body가 다 로드된 후에 이 기능을 동작하라  
+				
+		alert("!");
+	} */ 
+  
+	/* jQuery */
+	/* $(function(){ 위와 동일한 기능  모든 문서가 만들어지고 난 후에  이 기능 동작하라
+		alert("!");
+	}); */
+	
+	/*  window.onload=function(){
+		
+		alert(document.getElementById("button1"));
+	 button1에 접근
+	}  */
+	
+	/*  $(function(){
+		
+		$("#button1")
+	});  */
+	
+
+
+
+
+/* javascript */  버튼클릭시 이벤트
+	
+	
+	window.onload=function(){ 
+				
+		var button=document.getElementById("button1");
+		button.addEventListener("click",function(){
+			alert("!");
+		});
+	} 
+
+
+	/* jQuery */
+  $(function(){
+	  $("#button1").on("click",function(){
+			alert("!");
+		});
+  })
+
+
+  
+	
+/* javascript */ 빈칸에 값넣고 바로찍기 alert로
+	
+<body>
+
+	<input type="text" id="content">
+	<button id="button1">TEST</button>
+	
+	
+
+</body>
+
+	
+	 window.onload=function(){ 
+				
+		var button=document.getElementById("button1");
+		button.addEventListener("click",function(){
+		 	var content=document.getElementById("content").value; 입력받은내용을 저장
+		 	alert(content); 띄워 보여주기
+document.getElementById("content").value=""; 빈칸으로만들기
+		});
+	} 
+
+
+
+	/* jQuery */
+   $(function(){
+	  $("#button1").on("click",function(){
+			alert($("#content").val());//getter
+			$("#content").val("");//setter
+  });
+
+
+
+	/* javascript */  innerHTML  태그까지읽음  태그속에 내용을 넣어줌
+	
+
+	 window.onload=function(){ 
+				
+		var button=document.getElementById("button1");
+		button.addEventListener("click",function(){
+		 	var content=document.getElementById("content").value;
+		 	document.getElementById("header").innerHTML=content; 
+		 	document.getElementById("content").value="";
+		});
+	} 
+
+
+/* jQuery */
+    	/* jQuery */
+    $(function(){
+	  $("#button1").on("click",function(){
+			var content=$("#content").val();//getter
+			$("#header").html(content);
+			
+			$("#content").val("");//setter)
+  }); 
+	
+	
+		$("body").on("click",function(){alert("123")});
+    });
+
+mouseenter 마우스가 영역안에 들어갔을때이벤트
+mouseleave 영역 벗어낫을대 이벤트

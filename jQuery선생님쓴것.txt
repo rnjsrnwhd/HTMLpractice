@@ -1,0 +1,77 @@
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
+<html>
+<head>
+	<title>Home</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+		
+	    /* window.onload=function(){
+			
+			var button=document.getElementById("button1");
+			button.addEventListener("click",function(){
+				
+				var content=document.getElementById("content").value;
+				
+				document.getElementById("header").innerHTML=content;
+				
+				document.getElementById("content").value="";
+				
+			});
+			
+		}   */   		//javascript
+	
+		$(function(){
+			var content="";
+			
+			$("#button1").on("click",function(){
+				content=$("#content").val();//getter
+			});
+			
+			$("td").on("click",function(event){
+				
+				var target = $( event.target );
+				if(content!=""){
+					target.html(content);
+					content="";
+				}else{
+					target.html("");
+				}
+				
+			});
+			
+			
+		});   	//jQuery
+		
+		
+</script>
+<style>
+	td{
+		width:40px;
+		height:40px;
+		border:1px solid;
+	}
+</style>
+<body>
+
+	<h1 id="header"></h1>
+	
+	<table>
+	<tr><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td></tr>
+	</table>
+	
+	
+	<input type="text" id="content">
+	<button id="button1">INPUT</button>
+
+
+</body>
+</html>

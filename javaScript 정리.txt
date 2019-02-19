@@ -1,0 +1,36 @@
+HTML 정보
+CSS 디자인
+JAVASCRIPT 웹브라우저 html제어
+
+html과 javascript 구분 기준
+ javascipt 쓰는법
+	inline 방식
+		은 태그에 직접 자바스크립트를 기술하는 방식이다.
+ 	장점은 태그에 연관된 스크립트가 분명하게 드러난다는 점이다. 
+	하지만 정보와 제어가 섞여 있기 때문에 정보로서의 가치가 떨어진다.
+	 <input type="button" onclick="alert('Hello world')" value="Hello world" />
+	onclick="  html문법   "     onclick이라는 속성내에 javascript가 들어가간다는 약속이되어있음
+	alert('Hello world') : javaScript 문법
+	html 안에 javaScript코드를 혼재해서 사용-- 지양 해야 될 방법	
+-----------------------------
+	script태그 사용
+		-- head끝부분밑 body위에 넣음
+	html 코드로 해석을 하다가 <script>가나오면 javaScript로 해석
+	html과 javascript 코드를 분리 
+------------------------------
+	외부 파일로 분리
+	
+	js를 별도의 파일로 분리할 수도 있다. 장점은 보다 엄격하게 정보와 제어를 분리할 수 있다.
+	 하나의 js 파일을 여러 웹페이지에서 로드함으로서 js의 재활용성을 높일 수 있다. 
+	캐쉬를 통해서 속도의 향상, 전송량의 경량화를 도모할 수 있다.
+	<body>
+    	<input type="button" id="hw" value="Hello world" />
+    	<script type="text/javascript" src="script2.js"></script>  javascript의 확장자는.js
+	</body> 
+	html과 javascript를 완전 분리가능--유지보수의 편의성 향상
+
+
+
+
+
+	

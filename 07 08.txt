@@ -1,0 +1,96 @@
+07 색상과 배경을 위한 스타일
+	웹에서 색상 표현하는 법
+		1. 16진수 표기법 #RRGGBB
+		2. rgb , rgba   (255,0,0)  a는 불투명도 값
+		3. hsl , hsla   색상, 채도, 밝기
+		4. 색상 이름 표기법
+	
+	배경 색과 배경 이미지
+		속성
+		background-color 배경색 지정
+		background-clip	배경 적용 범위 조절
+				border-box 외곽 테두리까지
+				padding-box 테두리 뺀 패딩범위까지
+				content-box 내용만
+		background-image 웹요소에 배경 이미지 넣기
+				 background-image : url('파일경로');
+		background-repeat 배경 이미지 반복 
+		background-size 	배경이미지 크기 조절
+				auto 원래크기
+				contain 요소안 배경 이미지 다 들어오게
+				cover 배경 이미지로 요소 모두 덮도록 확대 축소
+		background-position 
+				배경 이미지 위치 조절
+				background-position: 수평위치 수직위치;
+				키워드 표기법, 백분율, 길이px 사용가능
+		background-origin	배경이미지 배치할 기준 조절
+		background-attachment 배경이미지 고정하기
+				background-attachment : fixed 사용시 스크롤 시 이미지 남아서 보임
+
+	그라데이션 효과
+		표준화 구문외에 지원하지않는 브라우저와 접두사 붙여서 사용하는 브라우저까지 함께 입력해야함
+		background : linear-gradient(to right bottom,blue,red);
+					각도  방향  시작 컬러 끝 컬러
+		방향: to 끝지점
+		각도: deg 맨위가 0deg부터 시계방향으로 회전
+		색상 중지점 : 바뀌는 지점의 색  color-stop
+
+		원형 그라데이션
+		원의 중심부터 바깥방향으로 색상 전환
+
+08 레이아웃을 위한 스타일 
+	웹에서 레이아웃이란 여러 박스 모델들의 조합
+	박스 모델들은  실제 내용 영역, 테두리, 여백으로 구성
+ 
+	CSS와 박스 모델
+		블록 레벨 요소 : 태그로 요소 삽입시 혼자 한줄 차지
+		인라인 레벨 요소 : 줄 차지 하지않음
+
+		박스 모델 : 박스 형태의 콘텐츠
+`			블록 레벨 요소는 모두 박스모델
+
+	width, height - 콘텐츠 영역의 크기
+			크기 백분율 auto
+
+	display - 화면 배치 방법 결정
+		블록 레벨 , 인라인 레벨 변경 가능 
+		display:block  블록 레벨로 지정
+		display:inline 인라엔 레벨로 바꿈
+		display:inline-block  요소는 인라인 내용은 블록
+	
+	테두리 관련 속성
+		border-style - 테두리 스타일 지정
+		border-width - 테두리 두께 지정
+		border-color - 테두리 색상 지정
+		border-radius - 테두리 모서리 둥글게 만들기
+
+		box-shadow - 선택한 요소에 그림자 효과
+
+	여백 조절 속성
+		margin - 요소 주변 여백 설정 
+			현재 요소 주변의 여백을 의미
+		padding - 콘텐츠 영역과 테두리 사이의 여백 설정
+			테두리 안쪽의 여백
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
