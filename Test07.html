@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box1{
+      box-sizing:border-box;
+      width: 300px;
+      height: 150px;
+      margin: 10px;
+      padding: 30px;
+      border: 2px solid red;
+
+    }
+    #phone{
+      width:30%;
+      height:30%;
+      float: left;
+      margin-right:15px;
+      z-index:5;
+    }
+    #phone2{
+      position:relative;
+      z-index:1;
+      width:60%;
+      height:60%;
+      left:-150px;
+      top:70px;
+
+    }
+    #fx{
+      position:fixed;
+      top:5px;
+      right:5px;
+      width:50px;
+      height:50px;
+      background:yellow;
+    }
+    div#wrapper{
+      position:relative;
+    }
+    #z1{
+
+      width:50px;
+      height:50px;
+      background:red;
+      z-index:1;
+    }
+    #z2{
+
+      width:50px;
+      height:50px;
+      background:blue;
+        z-index:3;
+    }
+    #z3{
+
+      width:50px;
+      height:50px;
+      background:black;
+        z-index:1;
+      }
+
+    #text1{
+
+      column-width: 120px;
+    }
+    #text2{
+
+      column-count: 20;
+      column-gap:15px;
+      column-rule-color: blue;
+      column-rule-style: dotted;
+      column-rule-width: thin;
+    }
+    table{
+      border:1px solid red;
+       }
+      td{
+        border:1px solid blue;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <img id="phone" src="image/phone.jpg">
+  <img id="phone2" src="image/phone2.jpg">
+
+  <p id="text1">■ 삼성 '갤럭시 폴드'…7.3인치 인폴딩 디스플레이·외부 패널
+
+삼성전자는 5일 앞서 20일(현지시간) 미국 샌프란시스코에서 신제품 공개행사(언팩)를 개최하고 폴더블 스마트폰(갤럭시 폴드·가칭)을 공개할 예정이다. 한국 시각으로는 21일 오전 4시께가 될 전망이다.
+
+갤럭시 폴드는 화면이 안으로 접히는 인폴딩(In-folding) 방식을 채택했다. 스마트폰을 접었을 때 디스플레이 크기는 4.58인치, 펼쳤을 때는 7.3인치 크기다. 화면을 펼치면 태블릿처럼 사용 가능하고, 접으면 외부에 부착된 디스플레이로 전화 수신과 메시지 발신 등의 작업을 할 수 있다. 펼쳤을 때 화면이 커 '멀티 태스킹(다중 작업)'에 유용할 것이라는 관측이다.
+
+핵심 부품은 삼성디스플레이가 공급하는 '인피니티 플렉스 디스플레이(Infinity Flex Display)'다. 이 패널은 2밀리미터(mm)에서 3mm 사이의 곡률(曲率·굽힐 수 있는 정도)을 구현, 약 20만 번을 접었다 펼 수 있다. 20만 번은 하루 100번을 접었다 펼쳤을 경우 약 6년(21만9천 번) 가까이 사용할 수 있는 수준이다.
+
+인피니티 플렉스 디스플레이는 자유롭게 구부릴 수 있어 폼팩터 혁신이 가능한 플렉시블 유기발광다이오드(OLED)의 일종이다. 삼성디스플레이는 이 분야에서 시장 점유율 94.2%(작년 3분기 기준, IHS마킷)를 기록 중이다.</p>
+<p id="text2">■ 삼성 '갤럭시 폴드'…7.3인치 인폴딩 디스플레이·외부 패널
+
+삼성전자는 5일 앞서 20일(현지시간) 미국 샌프란시스코에서 신제품 공개행사(언팩)를 개최하고 폴더블 스마트폰(갤럭시 폴드·가칭)을 공개할 예정이다. 한국 시각으로는 21일 오전 4시께가 될 전망이다.
+
+갤럭시 폴드는 화면이 안으로 접히는 인폴딩(In-folding) 방식을 채택했다. 스마트폰을 접었을 때 디스플레이 크기는 4.58인치, 펼쳤을 때는 7.3인치 크기다. 화면을 펼치면 태블릿처럼 사용 가능하고, 접으면 외부에 부착된 디스플레이로 전화 수신과 메시지 발신 등의 작업을 할 수 있다. 펼쳤을 때 화면이 커 '멀티 태스킹(다중 작업)'에 유용할 것이라는 관측이다.
+
+핵심 부품은 삼성디스플레이가 공급하는 '인피니티 플렉스 디스플레이(Infinity Flex Display)'다. 이 패널은 2밀리미터(mm)에서 3mm 사이의 곡률(曲率·굽힐 수 있는 정도)을 구현, 약 20만 번을 접었다 펼 수 있다. 20만 번은 하루 100번을 접었다 펼쳤을 경우 약 6년(21만9천 번) 가까이 사용할 수 있는 수준이다.
+
+인피니티 플렉스 디스플레이는 자유롭게 구부릴 수 있어 폼팩터 혁신이 가능한 플렉시블 유기발광다이오드(OLED)의 일종이다. 삼성디스플레이는 이 분야에서 시장 점유율 94.2%(작년 3분기 기준, IHS마킷)를 기록 중이다.</p>
+<table>
+  <tr><td>하이</td><td>바이</td></tr>
+    <tr><td>하이</td><td>바이</td></tr>
+      <tr><td>하이</td><td>바이</td></tr>
+      <tr><td>하이</td><td>바이</td></tr>
+        <tr><td>하이</td><td>바이</td></tr>
+          <tr><td>하이</td><td>바이</td></tr>
+          <tr><td>하이</td><td>바이</td></tr>
+            <tr><td>하이</td><td>바이</td></tr>
+              <tr><td>하이</td><td>바이</td></tr>
+</table>
+
+<div class="box2"></div>
+
+  <div class="box2"></div>
+  <div id="fx"></div>
+  <div id="wrapper">
+  <div id="z1"></div>
+  <div id="z2"></div>
+  <div id="z3"></div>
+  </div>
+</body>
+</html>
